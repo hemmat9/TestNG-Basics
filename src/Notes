@@ -1,0 +1,44 @@
+What is TestNG?
+
+TestNG is a tool that we use to automate application
+
+why do we need it?
+1-Reports
+2-Parallel execution
+3-annotation based execution
+4-grouping
+5-data driven testing
+6-multiple options for execution
+
+@Test annotaion -- this is the mainm annotation of testing to execute our test cases
+
+it execute test cases in Alphabitical order in default.
+
+@BeforeMethod; method as a precondition that executes before every test case.
+@AfterMethod; method as a postcondition that executes after every test case.
+
+Class - 2 notes
+
+User story 12345 - Admin user should be able to login with valid credentials
+user story 22345 - verify the tile of the application
+
+Priority - by default it is set to 0
+to prioritize the test cases, we use this attribute
+
+enable and disalbe; to make any test case enabled or disabled temporarlily we use this attribute
+
+Assertion;
+we have 2 type of assertion
+1- hard assertion; it stops the further execution if encounters the error
+2- soft assertion;
+---> verify and validate title
+---> verify and validate login field
+---> verify dashboard
+---> verify logout
+
+
+Depends on;
+if one test case depends on another
+
+
+Textng.xml where highest level is suite ---> test----> pakages--->class-----> methods
