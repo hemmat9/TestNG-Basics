@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/farha/IdeaProjects/TestNGBasicsBatch11">
-        <classes>
-            <class name="Class01.BeforeClassAndAfterClass"/>
-            <class name="Class01.FirstExample"/>
-            <class name="Class01.PreConditionAndPostCondition"/>
-            <class name="Class02.DependsOn"/>
 
+    <listeners>//listener class implemented at suite level
+        <listener class-name="Class03.ListenersClass"/>
+    </listeners>
+
+    <test verbose="2" preserve-order="true" name="Regression">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Class02.LoginTest"/>
         </classes>
     </test>
 </suite>

@@ -1,0 +1,12 @@
+
+TestNG is a unit testing framework,
+1- Report test execution
+2- anotation based test execution @Test
+3- prioritiezing text execution
+4- Data driven test exeting
+5- Parellel test execution 65% accurate
+6- we can exectute based on goupes
+
+@Test -->actual test
+@BeforeMethod --> it execute before every test (Openingn the browser, wait)
+

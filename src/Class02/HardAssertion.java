@@ -8,38 +8,27 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import utils.CommonMethods;
 
 import java.util.concurrent.TimeUnit;
 
-public class HardAssertion {
+public class HardAssertion extends CommonMethods {
 
-    WebDriver driver;
-    //pre condition @before method --- launch browser and navigate url
-
-    @BeforeMethod
-    public void openBrowserandLaunchApplication(){
-        System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
-        driver= new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login");
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-    }
-    @Test (priority = 1)
-    public void validationOfTitle(){
+    @Test
+    public void validationOfTitle() {
         String actuallTitle = driver.getTitle();
-        String expectedTitle = "Human Manaaaaaaaaaaagement System";
-        Assert.assertEquals(actuallTitle,expectedTitle);//instead of if-else condtions we should use Assertion
+        String expectedTitle = "Human Manaaaaagement System";
+        Assert.assertEquals(actuallTitle, expectedTitle);//instead of if-else condtions we should use Assertion
         //it is a hard assertion it will stop the further execution of the code.
+        /*if(actuallTitle.equals(expectedTitle)){
+            System.out.println("test is passed");
+        }else{
+            System.out.println("test is faild");
+        }*/
         WebElement username = driver.findElement(By.id("txtUsername"));
         Assert.assertTrue(username.isDisplayed());
         System.out.println("I am test code");
 
     }
-
-    //post condition @after method -- close browser
-
-    @AfterMethod
-    public void closeBrowser(){
-        driver.quit();
-    }
 }
+

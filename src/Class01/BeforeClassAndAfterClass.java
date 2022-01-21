@@ -12,8 +12,6 @@ public class BeforeClassAndAfterClass {
         System.out.println("I am after class");
     }
 
-
-
     @BeforeMethod
     public void beforeMethod(){
         System.out.println("I am before method");
@@ -23,7 +21,7 @@ public class BeforeClassAndAfterClass {
         System.out.println("I am after mehtod");
     }
 
-    @Test
+    @Test(groups = "regression")
     public void firstTest() {
 
         System.out.println("I am first test");
@@ -35,7 +33,7 @@ public class BeforeClassAndAfterClass {
         System.out.println("I am second test");
     }
 
-    @Test
+    @Test (groups = "regression")
     public void thirdTest() {
         System.out.println("I am third test");
     }

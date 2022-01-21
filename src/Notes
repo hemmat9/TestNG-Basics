@@ -6,7 +6,7 @@ why do we need it?
 1-Reports
 2-Parallel execution
 3-annotation based execution
-4-grouping
+4-grouping/segregation
 5-data driven testing
 6-multiple options for execution
 
@@ -28,17 +28,73 @@ to prioritize the test cases, we use this attribute
 enable and disalbe; to make any test case enabled or disabled temporarlily we use this attribute
 
 Assertion;
-we have 2 type of assertion
-1- hard assertion; it stops the further execution if encounters the error
-2- soft assertion;
+
 ---> verify and validate title
 ---> verify and validate login field
 ---> verify dashboard
 ---> verify logout
 
+we have 2 types of Assertions:
+1-Hard Assertions - Assertions we use for small execution because it stops execution if encounters error
+2-Soft assertions - Assertions we use to execute complete code with multiple check points and in the end we use assertall method
+to get the collective failure of test case
+
+
+Testng.xml where highest level is suite --> test --> packages --> class --> methods (@Test)
+
+groups - we use different groups to separate the test cases
+
+alwaysrun = true - we use this attribute to execute the pre and post condition from testng.xml file
+
+
 
 Depends on;
 if one test case depends on another
 
+Class03
+@before class and after class
+it executes before every class and after every class
 
-Textng.xml where highest level is suite ---> test----> pakages--->class-----> methods
+Priority:
+we use this attribute to prioritize our test cases executions
+
+enable and disable:
+to make any test disable and enable temporarly for execution we use this attribute
+
+Assertion:
+2 type of assertions are there we use assertion for verification and validation
+1-hard assertion stops further execution of test cases
+2-soft assertoim continues execution of test cases even if there is a failed test. we use assertAll method to get the collective failure from it.
+
+dependsOn:
+if one test case depends on the execution of another test case then we use this attribute infront of that test case which depends on another one and give the
+name of that case to it which this depends on.
+
+TestNg.xml file:
+to execute all the test cases, some of the test case in a single shot, it is call batch execution.
+batch execution is possible due to testng.xml file
+like:
+package wise
+class wise
+grouip wise
+method wise
+
+
+smoke--> to test the key functionality of our application is called smoke test, it is light wieght test which we performe once or two times to do it. we pick some
+test from my regression tests and use them in to the smoke test so to make sure that the funtionality of the application is performing as it should.
+(checking the key functionality of the application)
+regression--> if there is a defect in one of the test cases and develoment team has fixed it when, it is deployed back to testing environment we test is again
+and we also test the rest of the modules that the integration of this new test is not affecting our pervious test modules.
+(checking the fixed module and other module as well is regression testing)
+
+
+Data provider:
+it returns 2D array which we use to perfome data driven testing
+
+Listeners: listen all the events and provides us details of execution according to the instructions provided.
+
+
+
+
+
+

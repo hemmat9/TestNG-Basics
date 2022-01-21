@@ -4,7 +4,7 @@
     <test verbose="2" preserve-order="true" name="C:/Users/farha/IdeaProjects/TestNGBasicsBatch11">
        <packages>
            <package name="Class01"/>
-          <package name="Class02"/>
+           <package name="Class02"/>
        </packages>
     </test>
 </suite>

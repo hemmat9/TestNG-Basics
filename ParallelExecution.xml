@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>//listener class implemented at suite level
+        <listener class-name="Class03.ListenersClass"/>
+    </listeners>
+
+
+        <test verbose="2" preserve-order="true" name="Parallel Test" parallel="methods" thread-count="3">
+            //                                           test name       methods          how may methods are classes, better to have more threads than tests
+            <groups>
+                <run>
+                    <include name="Regression"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Class03.Paralleltest"/>
+            </classes>
+    </test>
+</suite>

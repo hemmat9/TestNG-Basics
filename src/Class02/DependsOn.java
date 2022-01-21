@@ -6,7 +6,10 @@ public class DependsOn {
     @Test
     public void login(){
        /* System.out.println("I am login Test");*/
-        System.out.println(10/0);//if one case fails it will scape another case which depends on it
+        /*System.out.println(10/0);*///if one case fails it will scape another case which depends on it
+        String a = null;
+        System.out.println(a.length());
+
     }
     @Test (dependsOnMethods = "login")
     public void verificationOfDashboard(){
